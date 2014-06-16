@@ -1,0 +1,345 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% Standard LaTeX Template used for creating presentation of Firebird-V Robot and other tutorials. 
+% Author: Saurav Shandilya (e-Yantra Team)
+% Reference: www.LaTeXTemplates.com Version 1.0 (10/11/12)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+		
+\documentclass[table,10pt,red]{beamer}	% First line -- Define document class as Beamer which is used for creating presentation using Latex
+\setbeamercolor{alerted text}{fg=blue} 	% Sets color of highlighted text during presentation.  
+ 
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+\usetheme{Berlin}		%used theme in present documents.
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+%}
+
+%------------------------------------------------------------------------------------------
+%	\usepackage is required for including various features like images, table, references etc.
+%	Packages must be installed before using. These can be istalled through package manager. 
+%   Various packages have dependencies and for using such packages all dependent packages must be used. 
+%-----------------------------------------------------------------------------------------
+\usepackage{beamerthemeshadow} % theme shadow for visual 
+\usepackage{beamerthemesplit} % Creates minipage (for showing multiple images and text) on same page  
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{xcolor}
+\usepackage{booktabs,array}
+\usepackage{listings}
+\usepackage{hyperref}	% Required for including hyperlink in document
+\usepackage{verbatim,moreverb} % Required for including code snippet.
+\usepackage{colortbl}
+\usepackage{multirow}	% Required for creating multiple row tables
+\usepackage{tikz}		% Required for drawing shapes such as circles, arrowed line, etc. 
+\usetikzlibrary{arrows}
+
+% logo
+\logo{\includegraphics[height=1cm]{iitblogo.pdf}} % includes logo at bottom of all slides 
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+% sf family, bold font
+\sffamily \bfseries
+% content inside [] appears at bottom of all page. content inside {} appears on first page as title. double backslash means line change 
+\title
+[
+	This is at bottom of all page	% bottom of all page
+	\hspace{0.5cm}
+	\insertframenumber/\inserttotalframenumber
+]
+{
+	Template for creating presentation using Latex 
+}
+
+\author
+[
+	www.e-yantra.org 	%Name at bottom of all page 
+]
+% author name on title slide
+{
+	e-Yantra Team \\
+  Embedded Real-Time Systems Lab\\
+  Indian Institute of Technology-Bombay \\
+}
+\date
+{
+IIT Bombay \\ {\today}	%\today picks system date on title slide
+}
+
+\begin{document} % IN LATEX ALL DOCUMENT/REPORT/PRESENTATION STARTS WITH \begin{document} AND ENDS WITH \end{document}
+
+\begin{frame}	% FRAME MEANS SLIDE. \begin{frame} STARTS THE SLIDE AND \end{frame} ENDS THE SLIDE
+	\titlepage % Print the title page as the first slide
+\end{frame}
+
+% START OF SECOND SLIDE
+\begin{frame}
+	\frametitle{Table of Content} % Table of contents slide, comment this block out to remove it
+	\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\subsection{Paragraphs of Text} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+% Start of Third slide
+\begin{frame}
+	\frametitle{Paragraphs of Text}
+ 		This slides shows paragraph of text. \\
+ 		
+ 		\color{red} This text is red  \color{black} this text is black
+\end{frame}
+
+%------------------------------------------------
+
+% Start of fourth slide
+\subsection{Bullet Points} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+	\frametitle{Bullet Points }
+	\begin{itemize}  % Shows text in bullet point 
+		\item Bullet-1
+		\item Bullet-2
+\end{itemize}
+
+\begin{enumerate}[$\checkmark$]
+		\item <+-|alert@+> First
+		\item <+-|alert@+> second
+\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------
+% Start of fifth slide
+\subsection{Blocks of Highlighted Text} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+	\frametitle{Blocks of Highlighted Text}
+	\begin{block}{Block 1}
+		Block 1
+	\end{block}
+
+	\begin{block}{Block 2}
+		Block 2
+	\end{block}
+
+	\begin{block}{Block 3}
+		\textbf{Block 3 in bold}
+	\end{block}
+\end{frame}
+
+%------------------------------------------------
+% Start of sixth slide
+\subsection{Multiple Columns} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+\frametitle{Multiple Columns}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\textbf{Column-1 }
+\begin{enumerate}
+\item Bullet-1
+\item Bullet-2
+\item Bullet-3
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+This is in second column
+
+\end{columns}
+\end{frame}
+
+% Start of seventh slide
+\subsection{Minipage} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+	\frametitle{Minipage} \pause
+		\begin{minipage}[c]{0.4\textwidth}
+			\includegraphics[width=\linewidth]{figure_1}
+		\end{minipage}
+	\pause
+	\hfill
+		\begin{minipage}[c]{0.5\textwidth}
+			\begin{enumerate}
+				\item <+-|alert@+> Point-1
+				\item <+-|alert@+> Point-2
+			\end{enumerate}
+		\end{minipage}   
+\end{frame}
+%------------------------------------------------
+\section{Second Section}
+%------------------------------------------------
+% Start of Eighth slide
+\subsection{Tables} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+\frametitle{Table}
+\begin{table}
+\begin{tabular}{l l l}
+\toprule
+\textbf{column 1} & \textbf{column 2} & \textbf{column 3}\\
+\midrule
+Row 1 & value1 & value2 \\
+Row 2 & value3 & value4 \\
+Row 3 & value5 & value6 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+% Start of Ninth slide
+\subsection{Code Snippet} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}[shrink = 2,fragile]
+	\frametitle{Write program snippet here} \pause
+	\framesubtitle{Program}
+		\begin{block}<1->{Main Program}	\pause
+		\begin{semiverbatim}
+				\scriptsize{
+				int main(void)
+				\{
+			\ \		int a,b,c;
+			\ \		if(a)
+			\ \		\{
+			\ \ \ \			printf("Hello World");
+			\ \ 	else	
+			\ \ \ \			printf("It is so much fun!!");
+			\ \		\}
+				\}
+ }
+			\end{semiverbatim}
+		\end{block} \pause
+	
+	\begin{block}<1->{Theorem}	\pause
+		\begin{semiverbatim}
+				Write your code here .. 
+			\end{semiverbatim}
+		\end{block} \pause
+\end{frame}
+%------------------------------------------------
+% Start of Tenth slide
+\subsection{Figure} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+\frametitle{Figure}
+Uncomment the code to include your own image. Name of image should be test and must be inside the project folder.
+%\begin{figure}
+%\includegraphics[width=0.8\linewidth]{test}
+%\end{figure}
+\end{frame}
+
+%------------------------------------------------
+% Start of Eleventh slide
+\subsection{Citation} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Citation}
+An example of the \verb|\cite| command to cite within the presentation:\\~
+
+This statement requires citation \cite{p1}.\\
+Part of this document was taken from \cite{p2} \\
+This document was created using
+\begin{itemize}
+	\item MiKTeX -- Latex back-end for Windows \cite{p3}
+	\item TeXnicCenter -- IDE for writing Latex code \cite{p4}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+% Start of 12th slide
+\subsection{References} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[1]{p1} Google INC 
+\newblock Title of the publication
+\newblock \emph{website} www.google.com
+
+\bibitem[2]{p2} Latex Templates 
+\newblock \emph{website} http://www.LaTeXTemplates.com
+
+\bibitem[3]{p3} MikTeX 
+\newblock \emph{website} http://miktex.org/
+
+\bibitem[4]{p4} TeXnicCenter 
+\newblock \emph{website} http://www.texniccenter.org/
+
+\end{thebibliography}
+}
+\end{frame}
+
+%------------------------------------------------
+% Start of Thirteenth slide
+\subsection{Thank You} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\begin{frame}
+\hskip4cm
+\textbf{\LARGE Thank You!} \\[20pt]
+\hskip3cm
+\scriptsize Post your queries on: 
+\hyperref[helpdesk@e-yantra.org]{\color{blue} helpdesk@e-yantra.org \color{black}} 
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\end{document} 
